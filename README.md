@@ -5,7 +5,17 @@ Cucumber](https://cucumber.io/docs/gherkin/reference#steps)
 génériques, surcouche française des matchers Capybara qui vous permet
 de contruire votre propre librairie d'actions pour vos tests Cucumber.
 
-Par exemple :
+Cette gem est fraîchement extraite de plusieurs projets Beta
+([APLyPro](https://github.com/betagouv/aplypro/blob/main/features/step_definitions/web_steps.rb),
+[Datapass](https://github.com/etalab/data_pass/blob/develop/features/step_definitions/web_steps.rb),
+[Auto-audit](https://github.com/betagouv/auto-audit/blob/main/features/step_definitions/web_steps.rb))
+et s'attend à une utilisation du DSFR.
+
+## Aperçu
+
+La librairie propose une [batterie
+d'actions](./lib/betagouv/cucumber/steps.rb), qui vous permet de
+composer vos tests. Par exmple, avec :
 
 ```ruby
 Alors("la page contient {string}") do |content|
@@ -48,9 +58,6 @@ FIXME: trouver une meilleur doc que [le fichier des
 steps](./lib/betagouv/cucumber/steps.rb).
 
 ## Debug / Contribution
-
-Cette gem est fraîchement extraite de plusieurs projets Beta et
-nécessite probablement plus de travail.
 
 Si un step ne fonctionne pas vous pouvez :
 
