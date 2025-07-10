@@ -15,7 +15,9 @@ et s'attend à une utilisation du DSFR.
 
 La librairie propose une [batterie
 d'actions](./lib/betagouv/cucumber/steps.rb), qui vous permet de
-composer vos tests. Par exmple, avec :
+composer vos tests.
+
+### Exemple bête mais pas méchant
 
 ```ruby
 Alors("la page contient {string}") do |content|
@@ -37,6 +39,26 @@ vous permet ensuite d'écrire :
 Scénario: la page d'accueil contient le nom du produit
   Quand je me rends sur la page d'accueil
   Alors la page contient "foobar"
+```
+
+### Exemple avancé : composition d'une étape à vous (métier)
+
+```ruby
+Quand("je rajoute un utilisateur {string}") do |nom|
+  steps %(
+    Quand je me rends sur la page d'accueil
+    Et que je clique sur "Rajoutez un utilisateur" dans le menu principal
+    Et que je remplis "Nom" avec "#{nom}"
+    Et que je clique sur "Enregistrer"
+  )
+end
+```
+
+```feature
+Fonctionnalité: Gestion des utilisateurs
+  Scénario: Je peux rajouter un utilisateur
+    Quand je rajoute un utilisateur "Marie Curie" # et paf
+    Alors la page contient "Marie Curie a bien été rajouté(e)"
 ```
 
 ## Installation
