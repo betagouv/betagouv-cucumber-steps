@@ -39,7 +39,7 @@ Dans un fichier `features/support/base-steps.rb` (ou autre fichier
 chargé par Cucumber) :
 
 ```ruby
-require 'betagouv-cucumber-steps'
+require 'betagouv/cucumber/steps'
 ```
 
 ## Liste des steps
