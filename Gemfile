@@ -12,8 +12,10 @@ gem "rspec", "~> 3.0"
 
 gem "rubocop", "~> 1.21"
 
-group :test do
-  gem "capybara"
-  gem "cucumber"
-  gem "rack"
-end
+gem "rubocop-capybara"
+gem "rubocop-rake"
+gem "rubocop-rspec"
+
+gem "capybara"
+gem "cucumber"
+gem "rack"

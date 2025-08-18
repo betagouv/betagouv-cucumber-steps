@@ -1,3 +1,10 @@
+inherit_from: .rubocop_todo.yml
+
+plugins:
+  - rubocop-rake
+  - rubocop-rspec
+  - rubocop-capybara
+
 AllCops:
   TargetRubyVersion: 3.1
 
