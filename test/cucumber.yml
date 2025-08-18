@@ -1,0 +1,3 @@
+default: --publish-quiet --format pretty --strict --tags 'not @wip'
+wip: --format pretty --strict --tags '@wip'
+html: --format html --out test/results.html

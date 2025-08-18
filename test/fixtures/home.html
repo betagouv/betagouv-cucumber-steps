@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenue sur Test App - Test App</title>
+    <link rel="stylesheet" href="https://www.systeme-de-design.gouv.fr/dist/dsfr.min.css">
+</head>
+<body>
+    <header role="banner" class="fr-header">
+        <div class="fr-header__body">
+            <div class="fr-container">
+                <div class="fr-header__body-row">
+                    <div class="fr-header__brand">
+                        <a href="/" title="Accueil - Test App">
+                            <span class="fr-header__service-title">Test App</span>
+                        </a>
+                    </div>
+                    <nav class="fr-nav" id="main-nav" role="navigation">
+                        <ul class="fr-nav__list">
+                            <li class="fr-nav__item">
+                                <a class="fr-nav__link" href="/users">Utilisateurs</a>
+                            </li>
+                            <li class="fr-nav__item">
+                                <a class="fr-nav__link" href="/settings">Paramètres</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <div class="fr-container">
+            <nav role="navigation" class="fr-breadcrumb" aria-label="vous êtes ici :">
+                <button class="fr-breadcrumb__button" aria-expanded="false">Voir le fil d'Ariane</button>
+                <div class="fr-collapse fr-breadcrumb__collapse" id="breadcrumb">
+                    <ol class="fr-breadcrumb__list">
+                        <li><a class="fr-breadcrumb__link" href="/">Accueil</a></li>
+                    </ol>
+                </div>
+            </nav>
+
+            <h1>Bienvenue sur Test App</h1>
+            
+            <p>Cette application permet de tester les steps Cucumber.</p>
+            
+            <a href="/users/new" class="fr-btn">Ajouter un utilisateur</a>
+            <button type="button" class="fr-btn fr-btn--secondary" disabled>Bouton désactivé</button>
+            
+            <section class="fr-mt-4w">
+                <h2>Actions rapides</h2>
+                <a href="/users" class="fr-link">Voir tous les utilisateurs</a>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

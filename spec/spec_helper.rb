@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "betagouv/cucumber/steps"
+require "betagouv/cucumber/steps/version"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

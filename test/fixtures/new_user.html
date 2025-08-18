@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un utilisateur - Test App</title>
+    <link rel="stylesheet" href="https://www.systeme-de-design.gouv.fr/dist/dsfr.min.css">
+</head>
+<body>
+    <header role="banner" class="fr-header">
+        <div class="fr-header__body">
+            <div class="fr-container">
+                <div class="fr-header__body-row">
+                    <div class="fr-header__brand">
+                        <a href="/" title="Accueil - Test App">
+                            <span class="fr-header__service-title">Test App</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <div class="fr-container">
+            <nav role="navigation" class="fr-breadcrumb" aria-label="vous êtes ici :">
+                <button class="fr-breadcrumb__button" aria-expanded="false">Voir le fil d'Ariane</button>
+                <div class="fr-collapse fr-breadcrumb__collapse" id="breadcrumb">
+                    <ol class="fr-breadcrumb__list">
+                        <li><a class="fr-breadcrumb__link" href="/">Accueil</a></li>
+                        <li><a class="fr-breadcrumb__link" href="/users">Utilisateurs</a></li>
+                        <li><span class="fr-breadcrumb__link">Nouveau</span></li>
+                    </ol>
+                </div>
+            </nav>
+
+            <h1>Ajouter un utilisateur</h1>
+            
+            <form action="/users" method="post" class="fr-form">
+                <fieldset class="fr-fieldset">
+                    <legend class="fr-fieldset__legend">Informations personnelles</legend>
+                    
+                    <div class="fr-fieldset__element">
+                        <div class="fr-input-group">
+                            <label class="fr-label" for="nom">Nom</label>
+                            <input class="fr-input" type="text" id="nom" name="nom">
+                        </div>
+                    </div>
+                    
+                    <div class="fr-fieldset__element">
+                        <div class="fr-input-group">
+                            <label class="fr-label" for="email">Email</label>
+                            <input class="fr-input" type="email" id="email" name="email">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="fr-fieldset">
+                    <legend class="fr-fieldset__legend">Préférences</legend>
+                    
+                    <div class="fr-fieldset__element">
+                        <div class="fr-select-group">
+                            <label class="fr-label" for="role">Rôle</label>
+                            <select class="fr-select" id="role" name="role">
+                                <option value="">Choisir un rôle</option>
+                                <option value="admin">Administrateur</option>
+                                <option value="user">Utilisateur</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="fr-fieldset__element">
+                        <div class="fr-radio-group">
+                            <input type="radio" id="theme-light" name="theme" value="light">
+                            <label class="fr-label" for="theme-light">Thème clair</label>
+                        </div>
+                        <div class="fr-radio-group">
+                            <input type="radio" id="theme-dark" name="theme" value="dark">
+                            <label class="fr-label" for="theme-dark">Thème sombre</label>
+                        </div>
+                    </div>
+                    
+                    <div class="fr-fieldset__element">
+                        <div class="fr-checkbox-group">
+                            <input type="checkbox" id="notifications" name="notifications" value="1">
+                            <label class="fr-label" for="notifications">Recevoir les notifications</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="fr-upload-group">
+                    <label class="fr-label" for="avatar">Photo de profil</label>
+                    <input class="fr-upload" type="file" id="avatar" name="avatar" accept="image/*">
+                </div>
+                
+                <div class="fr-btns-group">
+                    <button type="submit" class="fr-btn">Enregistrer</button>
+                    <a href="/users" class="fr-btn fr-btn--secondary">Annuler</a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

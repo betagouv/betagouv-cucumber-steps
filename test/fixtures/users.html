@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des utilisateurs - Test App</title>
+    <link rel="stylesheet" href="https://www.systeme-de-design.gouv.fr/dist/dsfr.min.css">
+</head>
+<body>
+    <header role="banner" class="fr-header">
+        <div class="fr-header__body">
+            <div class="fr-container">
+                <div class="fr-header__body-row">
+                    <div class="fr-header__brand">
+                        <a href="/" title="Accueil - Test App">
+                            <span class="fr-header__service-title">Test App</span>
+                        </a>
+                    </div>
+                    <nav class="fr-nav" id="main-nav" role="navigation">
+                        <ul class="fr-nav__list">
+                            <li class="fr-nav__item">
+                                <a class="fr-nav__link" href="/users">Utilisateurs</a>
+                            </li>
+                            <li class="fr-nav__item">
+                                <a class="fr-nav__link" href="/settings">Paramètres</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <div class="fr-container">
+            <nav role="navigation" class="fr-breadcrumb" aria-label="vous êtes ici :">
+                <button class="fr-breadcrumb__button" aria-expanded="false">Voir le fil d'Ariane</button>
+                <div class="fr-collapse fr-breadcrumb__collapse" id="breadcrumb">
+                    <ol class="fr-breadcrumb__list">
+                        <li><a class="fr-breadcrumb__link" href="/">Accueil</a></li>
+                        <li><span class="fr-breadcrumb__link">Utilisateurs</span></li>
+                    </ol>
+                </div>
+            </nav>
+
+            <h1>Liste des utilisateurs</h1>
+            
+            <table class="fr-table">
+                <caption>Utilisateurs enregistrés</caption>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Marie Curie</td>
+                        <td>marie.curie@example.com</td>
+                        <td>
+                            <a href="/users/1/edit" class="fr-btn fr-btn--sm">Modifier</a>
+                            <button type="button" class="fr-btn fr-btn--sm fr-btn--tertiary-no-outline">Supprimer</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Albert Einstein</td>
+                        <td>albert.einstein@example.com</td>
+                        <td>
+                            <a href="/users/2/edit" class="fr-btn fr-btn--sm">Modifier</a>
+                            <button type="button" class="fr-btn fr-btn--sm fr-btn--tertiary-no-outline">Supprimer</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <a href="/users/new" class="fr-btn fr-icon-add-line fr-btn--icon-left">Ajouter un utilisateur</a>
+        </div>
+    </main>
+</body>
+</html>
