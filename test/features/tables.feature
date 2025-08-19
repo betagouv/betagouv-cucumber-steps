@@ -23,3 +23,11 @@ Fonctionnalité: Tableaux et interactions avec les données
 
   Scénario: Vérification de l'absence de contenu
     Alors la page ne contient pas "Aucun utilisateur"
+
+  Scénario: Vérification du contenu ordonné d'une colonne en particulier
+    Alors la colonne "Nom" du tableau "Utilisateurs enregistrés" contient dans l'ordre :
+      | Marie Curie     |
+      | Albert Einstein |
+    Alors la colonne "Email" du tableau "Utilisateurs enregistrés" contient dans l'ordre :
+    | marie.curie@example.com     |
+    | albert.einstein@example.com |

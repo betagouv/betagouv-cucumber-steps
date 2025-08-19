@@ -143,13 +143,16 @@ Alors("je peux voir dans le tableau {string}") do |caption, table|
   expect(page).to have_table(caption, with_rows: table.rows)
 end
 
-Alors("je peux voir dans le tableau {string} dans cet ordre :") do |caption, table_data|
+Alors("la colonne {string} du tableau {string} contient dans l'ordre :") do |column_name, caption, table_data|
   within_table(caption) do
-    table_data.rows.each_with_index do |row, row_number|
-      row.each_with_index do |cel, cel_number|
-        expect(find("tr[#{row_number + 1}]/td[#{cel_number + 1}]")).to have_text(cel)
-      end
+    headers = all("thead th").map(&:text)
+    column_index = headers.index(column_name)
+
+    column_texts = all("tbody tr").map do |row|
+      row.all("th, td")[column_index].text
     end
+
+    expect(column_texts).to eq(table_data.raw.flatten)
   end
 end
 
