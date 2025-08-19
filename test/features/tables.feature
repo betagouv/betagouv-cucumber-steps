@@ -25,11 +25,9 @@ Fonctionnalité: Tableaux et interactions avec les données
     Alors la page ne contient pas "Aucun utilisateur"
 
   Scénario: Vérification du contenu ordonné d'une colonne en particulier
-    Alors je peux voir dans le tableau "Utilisateurs enregistrés" dans cet ordre :
-      | Nom             |
+    Alors la colonne "Nom" du tableau "Utilisateurs enregistrés" contient dans l'ordre :
       | Marie Curie     |
       | Albert Einstein |
-    Alors je peux voir dans le tableau "Utilisateurs enregistrés" dans cet ordre :
-    | Email                       |
+    Alors la colonne "Email" du tableau "Utilisateurs enregistrés" contient dans l'ordre :
     | marie.curie@example.com     |
-    | albert.einstein@exemple.com |
+    | albert.einstein@example.com |
