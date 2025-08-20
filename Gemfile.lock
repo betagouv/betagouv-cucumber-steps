@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    betagouv-cucumber-steps (0.0.1)
+    betagouv-cucumber-steps (0.1.0)
 
 GEM
   remote: https://rubygems.org/
