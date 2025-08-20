@@ -1,5 +1,8 @@
 inherit_from: .rubocop_todo.yml
 
+require:
+  - ./lib/rubocop/cop/cucumber/step_naming
+
 plugins:
   - rubocop-rake
   - rubocop-rspec
@@ -13,3 +16,6 @@ Style/StringLiterals:
 
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
+
+Cucumber/StepNaming:
+  Enabled: true
