@@ -133,7 +133,7 @@ Quand("j'attache le fichier {string} pour le champ {string}") do |path, field|
   attach_file(field, path)
 end
 
-Alors("je peux voir dans le tableau {string}") do |caption, table|
+Alors("le tableau {string} contient :") do |caption, table|
   expect(page).to have_table(caption, with_rows: table.rows)
 end
 

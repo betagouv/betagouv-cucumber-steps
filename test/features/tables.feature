@@ -6,7 +6,7 @@ Fonctionnalité: Tableaux et interactions avec les données
     Et que je clique sur "Utilisateurs" dans le menu principal
 
   Scénario: Vérification du contenu d'un tableau
-    Alors je peux voir dans le tableau "Utilisateurs enregistrés"
+    Alors le tableau "Utilisateurs enregistrés" contient :
       | Nom             | Email                        | Actions |
       | Marie Curie     | marie.curie@example.com      | Modifier Supprimer |
       | Albert Einstein | albert.einstein@example.com  | Modifier Supprimer |
