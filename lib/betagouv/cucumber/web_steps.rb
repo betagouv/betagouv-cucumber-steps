@@ -103,12 +103,6 @@ Quand("je clique sur {string} dans la dernière rangée") do |link|
   end
 end
 
-Quand("je clique sur {string} dans la classe {string}") do |link, title|
-  within("section", text: title) do
-    click_link_or_button(link)
-  end
-end
-
 Quand("je remplis le champ {string} dans la rangée {string} avec {string}") do |locator, row, value|
   within("tr", text: row) do
     fill_in locator, with: value
